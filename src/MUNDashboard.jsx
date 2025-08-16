@@ -296,7 +296,7 @@ export default function MUNDashboard() {
     <div className="wrap" style={{ maxWidth: 1280, margin: "16px auto", padding: "0 16px" }}>
       {/* Header */}
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12, minWidth: 0 }}>
-        <img src={withBase("mun-logo.png")} alt="Memorial University" style={{ height: 90, width: "auto" }} />
+        <img src="/mun-logo.png" alt="Memorial University" style={{ height: 90, width: "auto" }} />
         <div style={{ minWidth: 0 }}>
           <h1 style={{ margin: 0, fontSize: 25, fontWeight: 700, lineHeight: 1.25 }}>
             Population Health and Applied Health Sciences | Faculty of Medicine

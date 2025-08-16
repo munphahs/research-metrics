@@ -1,0 +1,142 @@
+/* ---------- Theme tokens ---------- */
+:root{
+  --bg:#f7f8fb;
+  --fg:#1f2937;          /* text */
+  --muted:#64748b;       /* secondary text */
+  --link:#2563eb;
+
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --shadow:0 2px 10px rgba(15,23,42,.05);
+
+  --input-bg:#ffffff;
+  --input-border:#d1d5db;
+
+  --axis:#475569;        /* chart axes */
+  --bar:#2563eb;         /* bar color */
+  --pie-1:#2563eb; --pie-2:#16a34a; --pie-3:#f59e0b; --pie-4:#ef4444;
+  --pie-5:#8b5cf6; --pie-6:#06b6d4; --pie-7:#84cc16; --pie-8:#fb7185;
+}
+
+/* ---------- Layout ---------- */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--fg);
+}
+
+a{ color:var(--link) }
+
+.wrap{ max-width:1120px; margin:24px auto; padding:0 16px }
+
+.controls, .kpis, .grid2{ display:grid; gap:12px }
+.controls{ grid-template-columns: repeat(12, 1fr); margin:16px 0 }
+.kpis{ grid-template-columns: repeat(3, 1fr) }
+.grid2{ grid-template-columns: 1fr 1fr }
+
+.box{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  box-shadow:var(--shadow);
+}
+
+label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px }
+
+input, select{
+  width:100%;
+  background:var(--input-bg);
+  color:var(--fg);
+  border:1px solid var(--input-border);
+  border-radius:8px;
+  padding:8px 10px;
+}
+
+/* ---------- Table ---------- */
+table{ width:100%; border-collapse:collapse; font-size:14px }
+thead{ position:sticky; top:0; background:#f3f4f6 }
+th, td{ padding:10px 12px; text-align:left; border-bottom:1px solid var(--border) }
+th{ color:#334155; font-weight:600 }
+
+/* ---------- Recharts readability ---------- */
+.recharts-cartesian-axis-tick text{ fill:var(--axis); font-size:12px }
+.recharts-text{ fill:var(--fg) }
+.recharts-legend-item-text{ color:var(--fg) }
+.recharts-tooltip-wrapper{ filter: drop-shadow(0 2px 10px rgba(0,0,0,.08)) }
+.recharts-default-tooltip{
+  background:#fff; border:1px solid var(--border); border-radius:8px; padding:8px 10px; color:var(--fg)
+}
+.recharts-pie-label-text{ fill:var(--axis) }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .grid2{ grid-template-columns:1fr }
+  .kpis{ grid-template-columns:1fr }
+  .controls{ grid-template-columns:1fr }
+}
+
+/* Wider page container */
+.wrap { max-width: 1280px; }
+
+/* Header with logo */
+.header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.logo { width: 40px; height: 40px; object-fit: contain; }
+.title { margin: 0; font-size: 28px; font-weight: 700; }
+.subtitle { color: var(--muted); font-size: 14px; }
+
+/* Filter chips */
+.chips { display: flex; gap: 8px; margin: 6px 0 12px; }
+.chip {
+  border: 1px solid #d9dbe3; background:#fff; border-radius: 999px;
+  padding: 6px 10px; font-size: 12px; cursor: pointer;
+}
+
+.wrap {
+  max-width: 1600px; /* Wider dashboard */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for charts */
+  gap: 12px;
+}
+
+.box {
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Keep KPIs in one row */
+  gap: 8px;
+}
+
+.kpi-value {
+  font-size: 20px; /* Slightly smaller */
+}
+
+.pretty-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 6px 10px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), inset 0 0 0 1px rgba(255,255,255,0.6);
+}
+.pretty-input:focus-within { border-color: #93c5fd; box-shadow: 0 0 0 3px #93c5fd33; }
+.pi-icon { font-size: 14px; margin-right: 8px; opacity: .65; }
+.pi-field {
+  border: none; outline: none; width: 100%;
+  font-size: 14px; background: transparent; padding: 6px 2px;
+}
+.kpi-card { backdrop-filter: saturate(1.1); }

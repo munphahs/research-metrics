@@ -1,7 +1,4 @@
 // vite.config.js
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
 export default {
-  base: '/<research-metrics>/',
-}
+  base: '/research-metrics/',   // 👈 must match your repo name
+};

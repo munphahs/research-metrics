@@ -302,7 +302,7 @@ export default function MUNDashboard() {
             Population Health and Applied Health Sciences | Faculty of Medicine
           </h1>
           <div style={{ color: "#090909", fontSize: 26, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-            Research Data Metrics
+            Student Theses
           </div>
         </div>
       </div>
